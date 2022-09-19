@@ -1,0 +1,11 @@
+D:\Documents\GitHub\CAI_-01-19092022-EjercicioAgendaV2\ProyectoAgendaV2\ProyectoAgendaV2.InterfazGrafica\obj\Debug\ProyectoAgendaV2.InterfazGrafica.csproj.AssemblyReference.cache
+D:\Documents\GitHub\CAI_-01-19092022-EjercicioAgendaV2\ProyectoAgendaV2\ProyectoAgendaV2.InterfazGrafica\obj\Debug\ProyectoAgendaV2.InterfazGrafica.csproj.SuggestedBindingRedirects.cache
+D:\Documents\GitHub\CAI_-01-19092022-EjercicioAgendaV2\ProyectoAgendaV2\ProyectoAgendaV2.InterfazGrafica\obj\Debug\ProyectoAgendaV2.InterfazGrafica.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\CAI_-01-19092022-EjercicioAgendaV2\ProyectoAgendaV2\ProyectoAgendaV2.InterfazGrafica\bin\Debug\ProyectoAgendaV2.InterfazGrafica.exe.config
+D:\Documents\GitHub\CAI_-01-19092022-EjercicioAgendaV2\ProyectoAgendaV2\ProyectoAgendaV2.InterfazGrafica\bin\Debug\ProyectoAgendaV2.InterfazGrafica.exe
+D:\Documents\GitHub\CAI_-01-19092022-EjercicioAgendaV2\ProyectoAgendaV2\ProyectoAgendaV2.InterfazGrafica\bin\Debug\ProyectoAgendaV2.InterfazGrafica.pdb
+D:\Documents\GitHub\CAI_-01-19092022-EjercicioAgendaV2\ProyectoAgendaV2\ProyectoAgendaV2.InterfazGrafica\bin\Debug\ProyectoAgendaV2.Dominio.dll
+D:\Documents\GitHub\CAI_-01-19092022-EjercicioAgendaV2\ProyectoAgendaV2\ProyectoAgendaV2.InterfazGrafica\bin\Debug\ProyectoAgendaV2.Dominio.pdb
+D:\Documents\GitHub\CAI_-01-19092022-EjercicioAgendaV2\ProyectoAgendaV2\ProyectoAgendaV2.InterfazGrafica\obj\Debug\ProyectoAgendaV2.InterfazGrafica.csproj.CopyComplete
+D:\Documents\GitHub\CAI_-01-19092022-EjercicioAgendaV2\ProyectoAgendaV2\ProyectoAgendaV2.InterfazGrafica\obj\Debug\ProyectoAgendaV2.InterfazGrafica.exe
+D:\Documents\GitHub\CAI_-01-19092022-EjercicioAgendaV2\ProyectoAgendaV2\ProyectoAgendaV2.InterfazGrafica\obj\Debug\ProyectoAgendaV2.InterfazGrafica.pdb

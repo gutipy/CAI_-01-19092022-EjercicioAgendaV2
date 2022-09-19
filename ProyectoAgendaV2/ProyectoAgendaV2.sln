@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoAgendaV2.InterfazGrafica", "ProyectoAgendaV2.InterfazGrafica\ProyectoAgendaV2.InterfazGrafica.csproj", "{69A475B1-FB20-4612-A28D-F066A88F53EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoAgendaV2.Dominio", "ProyectoAgendaV2.Dominio\ProyectoAgendaV2.Dominio.csproj", "{FFCA17FD-0B84-423B-9F45-323AFF92BE0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69A475B1-FB20-4612-A28D-F066A88F53EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A475B1-FB20-4612-A28D-F066A88F53EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A475B1-FB20-4612-A28D-F066A88F53EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A475B1-FB20-4612-A28D-F066A88F53EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFCA17FD-0B84-423B-9F45-323AFF92BE0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFCA17FD-0B84-423B-9F45-323AFF92BE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFCA17FD-0B84-423B-9F45-323AFF92BE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFCA17FD-0B84-423B-9F45-323AFF92BE0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2C05C89-7EF4-4B3F-A2C5-949236CB1603}
+	EndGlobalSection
+EndGlobal
