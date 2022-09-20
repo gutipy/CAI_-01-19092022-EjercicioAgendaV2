@@ -15,6 +15,9 @@ namespace ProyectoAgendaV2.InterfazGrafica
         {
             //Declaración de variables
             string _opcionMenu = "";
+            string _codigoContacto;
+            int _codigoContactoValidado = 0;
+            bool flag;
 
             Contacto C1 = new ContactoPersona(1, "Calle 123", "Agustín", "Gutiérrez", DateTime.Now.AddYears(-26));
 
@@ -31,6 +34,11 @@ namespace ProyectoAgendaV2.InterfazGrafica
             agendaElectronica.AgregarContacto(C2);
             //agendaElectronica.AgregarContacto(C3);
             //agendaElectronica.AgregarContacto(C4);
+
+            C1.Llamar();
+            C1.Llamar();
+            C1.Llamar();
+            C2.Llamar();
 
             bool consolaActiva = true;
 
@@ -51,18 +59,39 @@ namespace ProyectoAgendaV2.InterfazGrafica
                         case "1":
                             //Listar contactos de la agenda
                             Listar(agendaElectronica, C2);
+
                             break;
+
                         case "2":
                             //Agrego un contacto a la agenda
                             Agregar(agendaElectronica);
+
                             break;
+
                         case "3":
                             //Elimino un contacto de la agenda
-                            Eliminar(agendaElectronica);
+                            do
+                            {
+                                Console.WriteLine("Ingrese el código del contacto que desea eliminar");
+                                _codigoContacto = Console.ReadLine();
+                                flag = FuncionValidarNumero(_codigoContacto, ref _codigoContactoValidado);
+
+                            }while (flag == false);
+
+                            Eliminar(agendaElectronica, _codigoContactoValidado);
+
                             break;
+
                         case "4":
+                            //Traer contacto más frecuente
+                            TraerContactoFrec(agendaElectronica);
+
+                            break;
+
+                        case "5":
                             //Salir del programa
                             Salir();
+
                             break;
                     }
                 }
@@ -83,7 +112,8 @@ namespace ProyectoAgendaV2.InterfazGrafica
                 "1 - Listar contactos de la agenda" + Environment.NewLine +
                 "2 - Agregar contacto" + Environment.NewLine +
                 "3 - Eliminar contacto" + Environment.NewLine +
-                "4 - Salir"
+                "4 - Traer contacto más frecuente" + Environment.NewLine +
+                "5 - Salir"
                 )
                 ;
         }
@@ -233,23 +263,43 @@ namespace ProyectoAgendaV2.InterfazGrafica
         }
 
         //Método para eliminar un contacto de la agenda
-        public static void Eliminar(Agenda agenda)
+        public static void Eliminar(Agenda agenda, int codigoContacto)
         {
-            //Declaración de variables
-            string _codigo;
-            int _codigoValidado = 0;
-            bool flag;
-
-            //Pido al usuario que ingrese el código de contacto y a la vez valido el input ingresado
-            do
-            {
-                Console.WriteLine("Ingrese el código del contacto que desea eliminar");
-                _codigo = Console.ReadLine();
-                flag = FuncionValidarNumero(_codigo, ref _codigoValidado);
-            } while (flag == false);
-
             //Le paso el código de contacto validado a la clase Agenda para que busque en la lista de contactos y si existe dicho contacto que lo elimine
-            agenda.EliminarContacto(_codigoValidado);
+            agenda.EliminarContacto(codigoContacto);
+        }
+
+        public static void TraerContactoFrec(Agenda agenda)
+        {
+            Contacto c = agenda.TraerContactoFrecuente();
+
+            if (c is ContactoPersona)
+            {
+                ContactoPersona contactoPersona = (ContactoPersona)c;
+                Console.WriteLine("El contacto más frecuente es de tipo Persona y sus datos son: " + Environment.NewLine +
+                    "Nombre: " + contactoPersona.Nombre + Environment.NewLine +
+                    "Apellido: " + contactoPersona.Apellido + Environment.NewLine +
+                    "Número de llamadas: " + contactoPersona.Llamadas
+                    )
+                    ;
+
+                Console.WriteLine("Presione una tecla para continuar...");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (c is ContactoEmpresa)
+            {
+                ContactoEmpresa contactoEmpresa = (ContactoEmpresa)c;
+                Console.WriteLine("El contacto más frecuente es de tipo Empresa y sus datos son: " + Environment.NewLine +
+                    contactoEmpresa.RazonSocial + Environment.NewLine +
+                    contactoEmpresa.Llamadas
+                    )
+                    ;
+
+                Console.WriteLine("Presione una tecla para continuar...");
+                Console.ReadKey();
+                Console.Clear();
+            }
         }
 
         public static void Salir()
@@ -295,29 +345,6 @@ namespace ProyectoAgendaV2.InterfazGrafica
             if (string.IsNullOrEmpty(cadena))
             {
                 Console.WriteLine("ERROR! La opción ingresada no puede ser vacío, intente nuevamente.");
-            }
-            else
-            {
-                flag = true;
-            }
-
-            return flag;
-        }
-
-        public static bool FuncionValidarTelefono(ref string telefono)
-        {
-            //Declaración de variables
-            bool flag = false;
-
-            //Validación de que el teléfono ingresado no sea vacío
-            if (string.IsNullOrEmpty(telefono))
-            {
-                Console.WriteLine("ERROR! La opción ingresada no puede ser vacío, intente nuevamente.");
-            }
-            //Validación de que el teléfono ingresado no posea más de 15 números
-            else if (telefono.Length > 15)
-            {
-                Console.WriteLine("ERROR! El número " + telefono + " no puede poseer más de 15 dígitos, intente nuevamente.");
             }
             else
             {

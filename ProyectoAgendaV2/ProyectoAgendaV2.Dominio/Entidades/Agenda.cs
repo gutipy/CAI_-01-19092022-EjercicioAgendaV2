@@ -90,22 +90,22 @@ namespace ProyectoAgendaV2.Dominio
         }
 
         //Función para traer el contacto frecuente (el que mas veces ha sido llamado)
-        public void TraerContactoFrecuente()
+        public Contacto TraerContactoFrecuente()
         {
             //Declaración de variables
             int _maximasLlamadas = 0;
-            int _idContacto = 0;
+            Contacto resultado = null;
 
             foreach (Contacto c in _contactos)
             {
                 if (c.Llamadas > _maximasLlamadas)
                 {
                     _maximasLlamadas = c.Llamadas;
-                    _idContacto = c.Codigo;
+                    resultado = c;
                 }
             }
 
-            Console.WriteLine("El contacto con ID: " + _idContacto + " tiene un total de " + _maximasLlamadas + " llamadas");
+            return resultado;
         }
     }
 }
